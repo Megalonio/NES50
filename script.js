@@ -1,11 +1,11 @@
 // Location of games and images
-const gamesFolder = "games/";
-const imagesFolder = "images/";
-const coresFolder = "cores/"
+const gamesFolder = "games/"; // Folder where your games are stored
+const imagesFolder = "images/"; // Folder where your images are stored
+const coresFolder = "cores/"; // Folder where your cores are stored (if needed)
 const gameGrid = document.getElementById("game-grid");
 
-// Path to the WebRetro instance
-const webretroPath = "/";
+// Path to the WebRetro instance (root directory)
+const webretroPath = "embed.js";  
 
 const webretroContainer = document.getElementById("webretro-container");
 
@@ -44,10 +44,14 @@ fetch(gamesFolder)
       // Add click event to launch game in WebRetro
       gameCard.addEventListener("click", () => {
         const queries = {
-          rom: `${gamesFolder}${fullFileName}`,
+          rom: `${gamesFolder}${fullFileName}`, // Pointing to the correct game file in the 'games' folder
           system: "nes", // NES system
           core: "nestopia_libretro" // NES core for WebRetro
         };
+
+        // Log the query object for debugging
+        console.log("Launching game:", gameName);
+        console.log("Queries:", queries);
 
         // Clear any existing iframe
         webretroContainer.innerHTML = "";

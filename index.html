@@ -10,7 +10,10 @@
   <h1>NES 50</h1>
   <div id="game-grid"></div>
   <div id="webretro-container" style="width: 60vh; height: 100vh;"></div>
-  <script src="path/to/embed.js"></script>
+  <script src="embed.js"></script>
   <script src="script.js"></script>
+  <script>
+    var frame = webretroEmbed(document.getElementById("webretro-container"), "../", {system: "nes", rom: "Isolated Warrior.nes"});
+  </script>
 </body>
 </html>
