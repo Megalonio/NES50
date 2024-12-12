@@ -1,0 +1,49 @@
+/* Dark mode styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000000; /* Pure Black */
+  color: #CCCCCC; /* Light Grey */
+  text-align: center;
+}
+
+h1 {
+  margin: 20px 0;
+  color: #FF0000; /* Red */
+}
+
+#game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.game-card {
+  border: 2px solid #FF0000; /* Red border */
+  border-radius: 8px;
+  background-color: #333333; /* Grey card background */
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(255, 0, 0, 0.3); /* Subtle red shadow */
+}
+
+.game-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #CCCCCC; /* Light Grey border */
+}
+
+.game-card h2 {
+  font-size: 16px;
+  margin: 10px 0 0;
+  text-transform: capitalize;
+  color: #CCCCCC; /* Light Grey */
+}
+
+#webretro-container {
+  margin-top: 20px;
+  width: 100%;
+  height: 500px;
+}
